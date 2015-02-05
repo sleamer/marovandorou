@@ -1,0 +1,350 @@
+/* Reset default browser CSS. Based on work by Eric Meyer:
+http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td{
+	background:transparent;
+	border:0;
+	margin:0;
+	padding:0;
+	vertical-align:baseline;
+}
+body{
+	line-height:1;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+ol, ul{
+	list-style:none;
+}
+blockquote{
+	quotes:none;
+}
+blockquote:before, blockquote:after{
+	content:'';
+	content:none;
+}
+del{
+	text-decoration:line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+a img{border:none;}
+img{vertical-align:bottom;}
+
+/* =Global
+-------------------------------------------------------------- */
+html{}
+body{
+	background:#F3EEE8;
+	color:#666;
+	font-family:Arial,Helvetica,Verdana,san-serif;
+	font-size:12px;
+	line-height:18px;
+}
+
+a,
+a:link,
+a:visited{
+	color:#970131;
+	text-decoration:none;
+}
+
+a:active,
+a:hover,
+a:focus{
+	text-decoration:underline;
+}
+
+/*Remove button padding in FF*/
+input[type="submit"]::-moz-focus-inner{
+	border:0;
+	padding:0;
+}
+
+/* =Reusable
+-------------------------------------------------------------- */
+.alert{color:red;font-weight:bold;text-transform:uppercase;}
+.align-center{text-align:center;}
+.align-left{text-align:left;}
+.align-right{text-align:right;}
+.float-left{float:left;}
+.float-right{float:right;}
+.hr{border-bottom:1px solid #ddd;clear:both;margin:0 0 19px;}
+.red{color:#970131;}
+
+.container{
+	clear:both;
+	margin:0 auto;
+	overflow:hidden;
+	padding:0 10px;
+	position:relative;
+	width:830px;
+}
+
+.colwrap{margin:0 -15px;overflow:hidden;}
+.col{float:left;margin:0 15px;}
+.col.center{float:none;margin:0 auto;}
+
+.w198{width:198px;}
+.w400{width:400px;}
+
+.strip{margin:0 -12px 40px -13px;overflow:hidden;}
+.strip img{float:left;margin:0 12px 0 13px;}
+
+/* =Page
+-------------------------------------------------------------- */
+#page{min-width:1000px;}
+
+/* =Header
+-------------------------------------------------------------- */
+#header div.logo{margin:30px 0 10px;text-align:center;}
+
+/* =Content
+-------------------------------------------------------------- */
+#content{min-height:470px;}
+
+#content h1{
+	color:#970131;
+	font-family:"Kristi", cursive;
+	font-size:34px;
+	letter-spacing:0.2em;
+	line-height:40px;
+	margin:0 0 40px;
+	text-align:center;
+}
+
+#content p{margin:0 0 15px;}
+body.pb-edition #content p{margin:0 0 7px;}
+#content span.caption{font-size:11px;}
+
+#content div.page-nav{
+	overflow:hidden;
+	padding:30px 0;
+}
+
+#content div.page-nav a.prev{
+	display:block;
+	float:left;
+	font-weight:bold;
+	text-align:left;
+	width:50%;
+}
+
+#content div.page-nav a.next{
+	display:block;
+	float:right;
+	font-weight:bold;
+	text-align:right;
+	width:50%;
+}
+
+#content div.video{margin:0 auto;width:400px;}
+#content div.video iframe{height:225px;width:400px;}
+body.fl-videos #content div.video iframe{height:302px;width:400px;}
+body.pb-videos #content div.video iframe{height:302px;width:400px;}
+
+/* =Slideshow
+-------------------------------------------------------------- */
+#slideshow{margin:0 auto;position:relative;width:1000px;}
+#slideshow div.slide:first-child{display:block;}
+#slideshow div.slide{display:none;text-align:center;}
+#slideshow div.slide img{margin:10px;}
+#slideshow a.flex-disabled{display:none !important;}
+#slideshow a.flex-prev{
+	background:url(arrow-prev.png) no-repeat;
+	display:block;
+	left:0;
+	height:32px;
+	margin-top:-16px;
+	opacity:0.1;
+	overflow:hidden;
+	position:absolute;
+	text-indent:-9999px;
+	top:50%;
+	width:32px;
+}
+
+#slideshow a.flex-next{
+	background:url(arrow-next.png) no-repeat;
+	display:block;
+	height:32px;
+	margin-top:-16px;
+	opacity:0.1;
+	overflow:hidden;
+	position:absolute;
+	right:0;
+	text-indent:-9999px;
+	top:50%;
+	width:32px;
+}
+
+#slideshow p.caption{display:block;margin:-3px 0 0 0;}
+
+/* Browser Resets
+*********************************/
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+/* =Nav
+-------------------------------------------------------------- */
+#nav{text-align:center;}
+#nav div.container{padding:30px 10px 80px;}
+#nav ul{list-style:none;}
+#nav li{display:inline;}
+#nav li a{
+	border-left:1px solid #aaa;
+	color:#666;
+	font-size:13px;
+	text-decoration:none;
+	padding:0 10px 0 13px;
+}
+#nav li:first-child > a{border-left:none;}
+#nav li ul{
+	display:none;
+	left:0;
+	margin:0;
+	position:absolute;
+	top:60px;
+	width:100%;
+}
+#nav li.on > a{color:#970131;}
+#nav li.parent > a{color:#970131;}
+#nav li.on > ul,
+#nav li.parent > ul{display:block;}
+
+#nav span.mobile-toggle{
+	background:url(menu-toggle.png) no-repeat center top;
+	border-top:1px solid #ddd;
+	cursor:pointer;
+	display:none;
+	height:12px;
+	margin:0 10px;
+}
+
+/* =Footer
+-------------------------------------------------------------- */
+#footer p{margin:30px 0 30px;text-align:center;}
+
+/* === For Less than 1000px
+================================================================================*/
+@media only screen and (max-width : 1000px){
+	#header{-webkit-text-size-adjust:none;}
+	#content{-webkit-text-size-adjust:none;}
+	#nav{-webkit-text-size-adjust:none;}
+	#footer{-webkit-text-size-adjust:none;}
+	#page{min-width:320px;}
+	#slideshow{width:850px;}
+}
+
+/* === For Less than 860px
+================================================================================*/
+@media only screen and (max-width : 860px){
+
+	.container{margin:0;padding:0 10px;width:auto;}
+	.colwrap{margin:0;}
+	.col{float:none;margin:0;}
+	.col.align-right{text-align:left;}
+	.col.center{margin:0;}
+
+	.w198{width:auto;}
+	.w400{width:auto;}
+
+	.col.center.w400{margin:0 auto;width:400px;}
+	.photo.float-right.w198{margin:0 0 20px 20px !important;width:198px;}
+
+	#content{min-height:0;}
+	#slideshow{width:660px;}
+	#slideshow a.flex-prev{left:5px;}
+	#slideshow a.flex-next{right:5px;}
+
+}
+
+/* === For Less than 680px
+================================================================================*/
+@media only screen and (max-width : 680px){
+	#slideshow{width:500px;}
+	#nav div.container{padding:30px 0 80px;}
+	#nav li a{padding:0 5px 0 8px;}
+}
+
+/* === For Less than 520px
+================================================================================*/
+@media only screen and (max-width : 520px){
+	#slideshow{width:400px;}
+	#slideshow img{margin:10px 0;max-width:300px;}
+	#nav ul{display:block;}
+}
+
+/* === For Less than 420px
+================================================================================*/
+@media only screen and (max-width: 420px){
+
+	.col.center.w400{margin:0 auto;width:300px;}
+	.photo.float-right.w198{float:none;margin:0 auto 20px !important;}
+
+	.strip{margin:0 0 20px;}
+	.strip img{margin:0 4px;width:52px;}
+
+	#header div.logo img{width:290px;}
+	#content h1{font-size:28px;}
+	#content div.video{margin:0 auto;width:300px;}
+	#content div.video iframe{height:169px;width:300px;}
+	body.fl-videos #content div.video iframe{height:227px;width:300px;}
+	body.pb-videos #content div.video iframe{height:227px;width:300px;}
+	#slideshow{margin:0 auto;padding:0;width:300px;}
+	#slideshow div.slidewrap{width:300px;}
+	#slideshow div.slide img{margin:10px 0;width:100%;}
+	#slideshow a.flex-prev{display:none;}
+	#slideshow a.flex-next{display:none;}
+	#nav{text-align:left;}
+	#nav div.container{padding:30px 0;}
+	#nav span.mobile-toggle{display:block;}
+	#nav ul{border-top:1px solid #ddd;display:none;}
+	#nav ul li{display:block;}
+	#nav ul li a{
+		border-bottom:1px solid #ddd;
+		display:block;
+		font-size:13px;
+		font-weight:bold;
+		text-decoration:none;
+		padding:5px 10px;
+	}
+	#nav ul li ul{border-top:none;display:block;left:auto;position:static;top:auto;}
+	#nav ul li ul li a{font-size:12px;font-weight:normal;padding:4px 30px;}
+
+}
